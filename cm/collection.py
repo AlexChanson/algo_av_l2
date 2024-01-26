@@ -19,7 +19,7 @@ class LinkedList:
         else:
             while p.suivant is not None:
                 p = p.suivant
-        p.suivant = Node(valeur)
+            p.suivant = Node(valeur)
 
     def __str__(self):
         """
