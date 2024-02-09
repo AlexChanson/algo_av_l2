@@ -2,8 +2,15 @@ class Node:
     def __init__(self,valeur, suivant=None):
         self.suivant = suivant
         self.valeur = valeur
+
+    def __iter__(self):
+        L = self
+        while L is not None:
+            yield L.valeur
+            L = L.suivant
+
     def __str__(self):
-        return str(self.valeur) + ("," + str(self.suivant)) if self.suivant is not None else ""
+        return str(self.valeur) + "," + str(self.suivant)
 
 
 class LinkedList:
