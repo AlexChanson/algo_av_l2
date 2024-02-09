@@ -2,6 +2,8 @@ class Node:
     def __init__(self,valeur, suivant=None):
         self.suivant = suivant
         self.valeur = valeur
+    def __str__(self):
+        return str(self.valeur) + ("," + str(self.suivant)) if self.suivant is not None else ""
 
 
 class LinkedList:
@@ -35,3 +37,12 @@ class LinkedList:
 
         buf = buf + "]"
         return buf
+
+
+class Couple:
+    def __init__(self, L, R):
+        self.left = L
+        self.right = R
+
+    def __repr__(self):
+        return f"({self.left},{self.right})"

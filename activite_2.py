@@ -42,3 +42,15 @@ def carre_fin(L:Node):
             P.suivant = Node(v)
             P = P.suivant
         return Mem
+
+def inversion(L:Node):
+    res = None
+    while L is not None:
+        res = Node(L.valeur, res)
+        L = L.suivant
+    return res
+
+l1 = Node(1, Node(2, Node(3)))
+print(l1)
+l2 = inversion(l1)
+print(l2)

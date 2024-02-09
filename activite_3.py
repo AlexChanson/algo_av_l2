@@ -1,0 +1,1 @@
+from cm.collection import LinkedList, Node
