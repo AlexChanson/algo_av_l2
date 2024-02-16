@@ -53,3 +53,23 @@ class Couple:
 
     def __repr__(self):
         return f"({self.left},{self.right})"
+
+
+class Pile:
+    def __init__(self, val=None):
+        if val is None:
+            self.pile = None
+        else:
+            self.pile = Node(val)
+
+    def push(self, valeur):
+        self.pile = Node(valeur, self.pile)
+        return self
+
+    def pop(self):
+        if self.pile is None:
+            return None
+        else:
+            tmp = self.pile.valeur
+            self.pile = self.pile.suivant
+            return tmp
