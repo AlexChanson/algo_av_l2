@@ -10,3 +10,4 @@ class AB:
 
 def estVide(A):
     return A is None
+

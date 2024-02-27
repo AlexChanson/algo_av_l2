@@ -13,6 +13,17 @@ class Node:
         return str(self.valeur) + "," + str(self.suivant)
 
 
+def python_to_linked(L):
+    if len(L) == 0:
+        return None
+    T = Node(L[0])
+    ptr = T
+    for e in L[1:]:
+        ptr.suivant = Node(e)
+        ptr = ptr.suivant
+    return T
+
+
 class LinkedList:
 
     def __init__(self, head=None):
@@ -73,3 +84,14 @@ class Pile:
             tmp = self.pile.valeur
             self.pile = self.pile.suivant
             return tmp
+
+    def __len__(self):
+        if self.pile is None:
+            return 0
+        else:
+            cnt = 0
+            ptr = self.pile
+            while ptr is not None:
+                cnt += 1
+                ptr = ptr.suivant
+            return cnt
