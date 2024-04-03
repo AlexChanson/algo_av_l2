@@ -16,7 +16,7 @@ def abrTest():
     F = AB(23)
     G = AB(45)
     E = AB(26, F, G)
-    C = AB(5, D, None)
+    C = AB(5, , None, D)
     B = AB(10)
     A = AB(9, C, B)
     return AB(12, A, E)
