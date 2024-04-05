@@ -10,7 +10,11 @@ class Node:
             L = L.suivant
 
     def __str__(self):
-        return str(self.valeur) + "," + str(self.suivant)
+        def rec(ab):
+            if ab.suivant is not None:
+                return str(ab.valeur) + ", " + str(ab.suivant)
+            return str(ab.valeur)
+        return "[" + rec(self) + "]"
 
 
 def python_to_linked(L):

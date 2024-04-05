@@ -1,5 +1,5 @@
 from cm.tree import AB
-from cm.collection import Pile
+from cm.collection import Pile, python_to_linked
 
 def abTest():
     D = AB("D")
@@ -87,3 +87,12 @@ g, d = abrCoupure(abrTest(), 23)
 afficherA(abrTest())
 afficherA(g)
 afficherA(d)
+
+
+def exp1():
+    a = python_to_linked(['+', 5, 1])
+    b = python_to_linked(['*', 3, a])
+    c = python_to_linked(['-', 6, 2])
+    d = python_to_linked(['/', c, 4])
+    return python_to_linked(['+', b, d])
+print(exp1())
